@@ -1,0 +1,22 @@
+# (optional) General settings
+[general]
+# (optional) `tracing-subscriber` settings
+log = "calypso_bot=trace"
+
+# (required) Discord settings
+[discord]
+# (required) Discord bot token
+token = "..."
+# (required) Discord application ID
+appid = 1234567890
+
+# (optional) Discord status settings
+[discord.status]
+type = 3 # Watching
+name = "the stars ✨"
+# This is deserialized from `serenity::model::gateway::Activity` with serde.
+# Note that it has a custom `Deserialize` implementation,
+# so you'll need to look at the code to see how it is deserialized.
+# https://docs.rs/serenity/0.10.9/serenity/model/gateway/struct.Activity.html
+# This can also be changed at runtime with calbot:status
+# (owners-only; argument is parsed from JSON)

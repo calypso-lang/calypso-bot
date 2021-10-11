@@ -1,0 +1,32 @@
+[package]
+name = "calypso-bot"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+toml = "0.5.8"
+serenity = { version = "0.10.9", features = ["unstable_discord_api"] }
+anyhow = "1.0.44"
+color-eyre = "0.5.11"
+tracing-subscriber = "0.2.25"
+tracing = "0.1.29"
+chrono = "0.4.19"
+serde_json = "1.0.68"
+
+[dependencies.serde]
+version = "1.0.130"
+features = ["derive"]
+
+[dependencies.tokio]
+version = "1.2.0"
+features = [
+    "macros",
+    "rt-multi-thread",
+    "signal",
+    "fs",
+    "io-util",
+]
+
+[dependencies.sysf-rs]
+git = "https://github.com/ThePuzzlemaker/sysf-rs.git"
+branch = "new-dunfield2013"
